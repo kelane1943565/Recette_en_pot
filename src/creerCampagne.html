@@ -1,0 +1,283 @@
+{% include '_partials/_header.html' with { title: 'Creer Campagne' } %}
+<section class="hero_campagne">
+    <div class="wrapper">
+        <h1>Créations de votre campagne</h1>
+    </div>
+</section>
+<section class="offre">
+    <div class="wrapper">
+        <h1>Commencons par votre offre</h1>
+
+        <div class="offreWrapper">
+            <div class="offreCard silver">
+                <h4>Offre en argent</h4>
+                <ul>
+                    <li>
+                        <p>-dure 6 mois!</p>
+                    </li>
+                    <li>
+                        <p>-accès à plus de 10 de nos recettes</p>
+                    </li>
+                    <li>
+                        <p>-jusqu’à 2$ directement a vous</p>
+                    </li>
+                    <li>
+                        <p>-livraison rapide pour les clients</p>
+                    </li>
+                </ul>
+                <h5>Combien cela coûte?</h5>
+                <ul>
+                    <li>
+                        <p>-100$ de départ</p>
+                    </li>
+                    <li>
+                        <p>-coût additionnelle pour plus de 500 commandes</p>
+                    </li>
+                </ul>
+                <button class="offreButton button">Je veux celui-ci!</button>
+            </div>
+            <div class="offreCard gold">
+                <h4>Offre en or</h4>
+                <ul>
+                    <li>
+                        <p>-dure 1 ans!</p>
+                    </li>
+                    <li>
+                        <p>-accès à toute les recettes</p>
+                    </li>
+                    <li>
+                        <p>-jusqu’à 3$ directement a vous</p>
+                    </li>
+                    <li>
+                        <p>-Mise en avant sur notre site</p>
+                    </li>
+                    <li>
+                        <p>-livraison rapide pour les clients</p>
+                    </li>
+                </ul>
+                <h5>Combien cela coûte?</h5>
+                <ul>
+                    <li>
+                        <p>-200$ de départ</p>
+                    </li>
+                    <li>
+                        <p>-aucun coût additionnelle pour plus de 500 commandes</p>
+                    </li>
+                </ul>
+                <button class="offreButton button">Je veux celui-ci!</button>
+            </div>
+            <div class="offreCard bronze">
+                <h4>Offre en bronze</h4>
+                <ul>
+                    <li>
+                        <p>-dure 3 mois!</p>
+                    </li>
+                    <li>
+                        <p>-accès à 5 recettes</p>
+                    </li>
+                    <li>
+                        <p>-jusqu’à 2$ directement a vous</p>
+                    </li>
+                </ul>
+                <h5>Combien cela coûte?</h5>
+                <ul>
+                    <li>
+                        <p>-50$ de départ</p>
+                    </li>
+                    <li>
+                        <p>-coût additionnelle pour plus de 300 commandes</p>
+                    </li>
+                </ul>
+                <button class="offreButton button">Je veux celui-ci!</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="information">
+    <div class="wrapper">
+        <h2>Information personnelle</h2>
+        <form action="" class="form" autocomplete="off" data-component="Form">
+            <div class="form__body">
+                <fieldset class="grid">
+                    <div class="input">
+                        <label class="input__label" for="lastName">*Nom</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="lastName"
+                            id="lastName"
+                            placeholder="Rondeau-Boisvert"
+                            required
+                        />
+                        <p class="textError">veuillez entrer ce champ</p>
+                    </div>
+                    <div class="input">
+                        <label class="input__label" for="argent">*Montant visée pour la campagne</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="argent"
+                            id="argent"
+                            placeholder="XXXX$"
+                            required
+                        />
+                        <p class="textError">veuillez entrer ce champ</p>
+                    </div>
+                    <div class="input checkbox">
+                        <input class="input__element" type="checkbox" name="optin[]" id="optin" required />
+                        <label class="input__label" for="optin">*veuillez accepter nos conditions</label>
+                        <p class="textError">vous devez accepter les conditions d'utilisations</p>
+                    </div>
+                    <div class="input">
+                        <label class="input__label" for="firstName">*Prénom</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="firstName"
+                            id="firstName"
+                            placeholder="Kélane"
+                            required
+                        />
+                        <p class="textError">veuillez entrer ce champ</p>
+                    </div>
+                    <div class="input">
+                        <label class="input__label" for="email">*Courriel</label>
+                        <input
+                            class="input__element"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="1943565@cegepmontpetit.ca"
+                            required
+                        />
+                        <p class="textError">veuillez entrer un courriel valide</p>
+                    </div>
+                    <div class="input">
+                        <label class="input__label" for="phone">*Téléphone</label>
+                        <input
+                            class="input__element"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="(123) 456-7890"
+                            required
+                        />
+
+                        <p class="textError">veuillez entrer un numéro de téléphone valide</p>
+                    </div>
+                    <div class="input select">
+                        <div class="input_select"></div>
+                        <label class="input__label" for="phone">*Type d'organisation</label>
+                        <select name="choixOrganisation" id="choixOrganisation" class="input__element" required>
+                            <option value="" hidden>veuillez sélectionner</option>
+                            <option value="ecole">école</option>
+                            <option value="clubSport">club sportif</option>
+                            <option value="centre">centre de la Petite Enfance</option>
+                            <option value="fondation">fondation</option>
+                            <option value="organisme">organisme</option>
+                            <option value="association">association</option>
+                            <option value="entreprise">entreprise privée</option>
+                            <option value="autre">autre</option>
+                        </select>
+                        <p class="textError">veuillez entrer ce champ</p>
+                    </div>
+                    <fieldset>
+                        <label class="input__label" for="nothing">*préférence de contact</label>
+                        <div class="input radio">
+                            <div class="input radio">
+                                <input
+                                    class="input__element"
+                                    type="radio"
+                                    name="radio[]"
+                                    id="radio1"
+                                    value="telephone"
+                                />
+                                <label class="input__label" for="radio1">téléphone</label>
+                            </div>
+                        </div>
+                        <div class="input radio">
+                            <div class="input radio">
+                                <input
+                                    class="input__element"
+                                    type="radio"
+                                    name="radio[]"
+                                    id="radio2"
+                                    value="courriel"
+                                />
+                                <label class="input__label" for="radio2">Courriel</label>
+                            </div>
+                        </div>
+                        <p class="textError">veuillez choisir</p>
+                    </fieldset>
+                    <div class="input">
+                        <label class="input__label" for="text">*Début de la campagne</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="durer"
+                            id="durer1"
+                            placeholder="jj/mm/aaaa"
+                            required
+                        />
+                        <p class="textError">veuillez entrer une date valide</p>
+                    </div>
+                    <div class="input">
+                        <label class="input__label" for="text">*fin de la campagne</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="durer"
+                            id="durer2"
+                            placeholder="jj/mm/aaaa"
+                            required
+                        />
+                        <p class="textError">veuillez entrer une date valide</p>
+                    </div>
+                    <div class="input textarea">
+                        <label class="input__label" for="description">*Description de la campagne</label>
+                        <textarea
+                            class="input__element"
+                            name="description"
+                            id="description"
+                            cols=""
+                            rows=""
+                            maxlength="500"
+                        ></textarea>
+                        <p class="textError">veuillez entrer une description</p>
+                    </div>
+                    <div class="input">
+                        <label class="input__label" for="adresse">*Adresse</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="adress"
+                            id="adress"
+                            placeholder="adresse"
+                            required
+                        />
+                        <p class="textError">veuillez entrer ce champ</p>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="submitButton">
+                <button class="button" type="submit" value="submit">Soumettre la demande</button>
+            </div>
+            <div class="form__confirmation">
+                <h2>Merci</h2>
+                <p>votre formulaire a bien été envoyé</p>
+            </div>
+        </form>
+    </div>
+</section>
+<template id="tpl-modal-tool">
+    <div class="modal">
+        <div class="modal__scrim"></div>
+        <div class="modal__box">
+            <div class="modal__content">
+                <h2>as-tu 18 ans et plus?</h2>
+            </div>
+            <button class="modal__close js-close"></button>
+        </div>
+    </div>
+</template>
+{% include '_partials/_footer.html' %}

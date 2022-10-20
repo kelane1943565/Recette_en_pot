@@ -1,0 +1,43 @@
+.hero {
+    background-image: url('../assets/images/background_hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        padding: 8rem 0;
+    }
+    h1 {
+        text-align: center;
+        margin: 4.3rem;
+        color: white;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        .gros {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+        .moyen {
+            grid-column: span 2;
+        }
+    }
+    @media screen and(max-width:900px) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .moyen {
+            grid-column: span 3;
+        }
+    }
+    @media screen and(max-width:500px) {
+        .moyen {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+    }
+}

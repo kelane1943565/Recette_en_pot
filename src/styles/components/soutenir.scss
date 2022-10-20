@@ -1,0 +1,113 @@
+.soutenir {
+    background-color: var(--color-bg);
+
+    .wrapper {
+        text-align: center;
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        h2,
+        h3 {
+            color: var(--color-black);
+        }
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12rem;
+        padding: 10rem 0;
+        align-items: center;
+    }
+    .button {
+        width: 30%;
+        text-align: center;
+    }
+    @media screen and(max-width:1500px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10rem;
+        }
+    }
+    @media screen and(max-width:950px) {
+        .grid {
+            gap: 6rem;
+        }
+    }
+    @media screen and(max-width:860px) {
+        .grid {
+            grid-template-columns: 1fr;
+            gap: 10rem;
+        }
+    }
+}
+.leucan {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+        margin: 1rem auto;
+    }
+
+    .leucan_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 2rem;
+        img {
+            width: 100%;
+        }
+        .doree {
+            color: var(--color-primary);
+        }
+    }
+    @media screen and(max-width:950px) {
+        .leucan_haut {
+            display: block;
+        }
+    }
+}
+.leucan_haut {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    img {
+        width: 50%;
+    }
+}
+
+.cardAss {
+    position: relative;
+    z-index: 2;
+    color: var(--color-white);
+    margin: 2rem 0;
+    h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    .icon {
+        position: absolute;
+        top: -130px;
+        left: -60px;
+        width: 30rem;
+        height: 30rem;
+        z-index: -1;
+        color: var(--color-primary);
+    }
+    @media screen and(max-width:1500px) {
+        .icon {
+            left: -50px;
+        }
+    }
+    @media screen and(max-width:950px) {
+        .icon {
+            left: -40px;
+        }
+        padding-bottom: 10rem;
+    }
+}

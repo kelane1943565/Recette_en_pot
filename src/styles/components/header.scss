@@ -1,0 +1,27 @@
+header {
+    background-image: url(../assets/images/background_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 0;
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: auto;
+    }
+    li {
+        padding: 0 1rem;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .icon {
+        margin-right: 0.2rem;
+    }
+}

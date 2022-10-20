@@ -1,0 +1,228 @@
+.information {
+    background-image: url('../assets/images/information.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+        text-align: center;
+    }
+    .wrapper {
+        padding: 2.5rem 0;
+    }
+    .form {
+        --input-radius: 3px;
+        --input-padding: 1rem;
+        color: black;
+        padding: var(--input-padding);
+        background-color: white;
+        width: 100%;
+
+        fieldset {
+            border: none;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 6rem 3rem;
+
+            @media screen and(max-width: 1000px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    .submitButton {
+        display: flex;
+        justify-content: center;
+
+        .is-sent & {
+            display: none;
+        }
+    }
+}
+
+.form__confirmation {
+    display: none;
+    text-align: center;
+    p {
+        font-size: 2rem;
+    }
+    .is-sent & {
+        display: block;
+    }
+}
+.form__body {
+    .is-sent & {
+        display: none;
+    }
+}
+
+.input__label {
+    display: block;
+}
+
+.checkbox,
+.radio {
+    .input__element {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .input__label {
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        padding-left: 2rem;
+
+        &::before,
+        &::after {
+            content: '';
+            height: 12px;
+            width: 12px;
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+
+        &::before {
+            background-color: white;
+            border-radius: var(--input-radius);
+            box-shadow: inset 0 1px 2px rgba($color: #000000, $alpha: 0.5);
+            border: #000000 1px solid;
+        }
+
+        &::after {
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.4s $ease-out-expo;
+        }
+    }
+
+    .input__element:checked + .input__label {
+        &::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.input__element {
+    border-radius: var(--input-radius);
+    border: 1px #949494 solid;
+    padding: var(--input-padding);
+    width: 70%;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 1px 2px rgba($color: #000000, $alpha: 0.5);
+
+    outline: none;
+
+    //hover
+    &:hover,
+    + .input__label:hover::before {
+        background-color: rgba($color: grey, $alpha: 0.1);
+    }
+
+    //focus
+    &:focus,
+    &:-webkit-autofill:focus,
+    &:focus + .input__label::before {
+        background-color: #ffe4bc;
+        box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.5);
+        -webkit-box-shadow: inset 0 0 0 30px white !important;
+    }
+
+    // autocomplete
+    &::placeholder {
+        color: grey;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:active {
+        -webkit-box-shadow: inset 0 0 0 30px rgba($color: grey, $alpha: 0.1) !important;
+        -webkit-text-fill-color: inherit !important;
+    }
+}
+
+/*
+   select
+   ========================================================================== */
+
+.select {
+    position: relative;
+    .input__element {
+        appearance: none;
+
+        padding-right: 1rem;
+    }
+
+    option {
+        background-color: white;
+        color: grey;
+    }
+
+    &::after {
+        --size: 12px;
+        content: '';
+        background: url('../assets/icons/chevron.svg') no-repeat 50% 50%;
+        height: var(--size);
+        position: absolute;
+
+        pointer-events: none;
+
+        right: 13.125rem;
+        transform: translateY(50%);
+        width: var(--size);
+        top: 50%;
+    }
+}
+/*
+    error
+    ========================================================================== */
+
+.error {
+    .input__element {
+        box-shadow: inset 0 0 0 3px red;
+    }
+    .input__label {
+        color: red;
+    }
+    .textError {
+        display: block;
+    }
+}
+.textError {
+    display: none;
+    color: red;
+    margin: 0;
+}
+
+/*
+   textarea
+   ========================================================================== */
+.textarea {
+    .input__element {
+        resize: vertical;
+        height: 200px;
+    }
+}
+
+.checkbox {
+    .input__label::after {
+        background: url('../assets/icons/coche.svg') no-repeat 50% 50%;
+        background-size: 50%;
+    }
+}
+.radio {
+    .input__label {
+        &::before {
+            border-radius: 100%;
+        }
+
+        &::after {
+            background-color: black;
+            border-radius: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+nav {
+    background-color: var(--color-primary);
+    .wrapper {
+        padding: 1rem 0;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center;
+        height: 100%;
+
+        li {
+            margin: auto 1rem;
+        }
+        a {
+        }
+    }
+}

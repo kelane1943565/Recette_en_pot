@@ -1,0 +1,55 @@
+.offre {
+    background-color: #f5f2e8;
+    h1 {
+        text-align: center;
+        color: black;
+    }
+}
+.offreWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .offreCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 41px;
+        align-items: center;
+        margin: 4rem auto;
+        width: 30%;
+        padding: 3rem 1rem;
+        gap: 2rem;
+        box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+
+        ul {
+            list-style: none;
+        }
+        .button {
+            width: 70%;
+            background-color: #f2c94c;
+        }
+    }
+    .silver {
+        background-color: #c7c7c7;
+    }
+    .gold {
+        background-color: #b99052;
+    }
+    .bronze {
+        background-color: #9b582e;
+    }
+    @media screen and(max-width:1200px) {
+        .offreCard {
+            width: 40%;
+        }
+    }
+    @media screen and(max-width:775px) {
+        .offreCard {
+            width: 60%;
+        }
+    }
+    @media screen and(max-width:500px) {
+        .offreCard {
+            width: 100%;
+        }
+    }
+}

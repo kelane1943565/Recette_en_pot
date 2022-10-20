@@ -1,0 +1,17 @@
+.hero_campagne {
+    background-image: url('../assets/images/heroCampagneBG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    padding-top: 2rem;
+    .wrapper {
+        position: relative;
+        margin: 2rem auto;
+        h1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.creerCampagne {
+    background-image: url('../assets/images/background_creer_une_campagne.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 0;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button {
+        width: 30%;
+        text-align: center;
+    }
+}
+.cardCarrousel {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
